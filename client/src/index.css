@@ -1,0 +1,58 @@
+@import url("https://fonts.cdnfonts.com/css/satoshi");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    font-family: "satoshi";
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-orange-500 px-[24px] py-[12px] rounded-full flex justify-center items-center gap-[8px] hover:bg-orange-400 active:bg-orange-600 w-[100%] text-white font-bold;
+  }
+  .btn-secondary {
+    @apply bg-orange-100 text-orange-500 px-[24px] py-[12px] rounded-full flex justify-center items-center gap-[8px] hover:bg-orange-100 hover:text-orange-400 focus:bg-orange-100 active:text-orange-600 w-[100%] font-bold;
+  }
+  .btn-icon {
+    @apply bg-orange-100 px-[20px] py-[20px] w-[60px] h-[60px] flex justify-center items-center rounded-full;
+  }
+  .btn-ghost {
+    @apply flex justify-center items-center gap-[4px] py-[4px] px-[2px] text-orange-500 font-bold hover:text-orange-400 active:text-orange-600;
+  }
+  .btn-social {
+    @apply bg-gray-100 text-gray-600 px-[24px] py-[12px] rounded-full flex justify-center items-center gap-[8px] hover:text-gray-400 active:text-gray-600 w-[100%] font-bold;
+  }
+
+  .input-label {
+    @apply text-black font-medium text-[16px] leading-[24px];
+  }
+
+  .input-box {
+    @apply w-full bg-white border rounded-lg py-3 px-4 outline-none;
+  }
+
+  .list-detail {
+    @apply flex flex-col;
+  }
+
+  .icon-btn {
+    @apply bg-[#F6F6F9] size-12 flex items-center justify-center rounded-full;
+  }
+
+  .checkbox-primary {
+    @apply absolute top-4 right-4 appearance-none w-6 h-6 bg-white border border-[#DCDFED] rounded-md flex items-center justify-center cursor-pointer;
+  }
+  .checkbox-primary:checked {
+    @apply bg-orange-500 border-orange-500;
+  }
+  .checkbox-primary:checked::after {
+    @apply content-['✓'] text-white font-bold text-xl;
+  }
+}
